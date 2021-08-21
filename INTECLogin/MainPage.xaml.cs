@@ -14,5 +14,16 @@ namespace INTECLogin
         {
             InitializeComponent();
         }
+
+        async void OnButtonClicked(object sender, EventArgs args)
+        {
+            if (!string.IsNullOrWhiteSpace(emailEntry.Text) || !string.IsNullOrWhiteSpace(passwordEntry.Text))
+            {
+                await DisplayAlert("Alerta", "No pueden haber campos vacios!", "OK");
+            } else
+            {
+                await DisplayAlert("Bienvenida", $"Hola, {emailEntry.Text}", "OK");
+            }
+        }
     }
 }
