@@ -22,7 +22,7 @@ namespace INTECLogin
                 await DisplayAlert("Alerta", "No pueden haber campos vacios!", "OK");
             } else
             {
-                await DisplayAlert("Bienvenida", $"Hola, {emailEntry.Text}", "OK");
+                await DisplayAlert("Bienvenid@", $"Hola, {emailEntry.Text}", "OK");
             }
         }
     }
