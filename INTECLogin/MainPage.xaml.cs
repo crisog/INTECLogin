@@ -17,7 +17,7 @@ namespace INTECLogin
 
         async void OnButtonClicked(object sender, EventArgs args)
         {
-            if (!string.IsNullOrWhiteSpace(emailEntry.Text) || !string.IsNullOrWhiteSpace(passwordEntry.Text))
+            if (string.IsNullOrWhiteSpace(emailEntry.Text) || string.IsNullOrWhiteSpace(passwordEntry.Text))
             {
                 await DisplayAlert("Alerta", "No pueden haber campos vacios!", "OK");
             } else
